@@ -1,4 +1,4 @@
-import Echo from 'laravel-echo';
+import './connection.d.ts';
 import { Config } from 'ziggy-js';
 
 export interface User {
@@ -16,9 +16,3 @@ export type PageProps<
     };
     ziggy: Config & { location: string };
 };
-
-declare global {
-    interface Window {
-       Echo: Echo,
-    }
-}
