@@ -1,10 +1,7 @@
 <?php
 
-use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 
-Route::get('/user', function (Request $request) {
-    // return $request->user();
-    dd($request);
-    return 'woah';
+Route::get('/user', function () {
+    return response('test')->withCookie(cookie('test', 'woah?'));
 });
